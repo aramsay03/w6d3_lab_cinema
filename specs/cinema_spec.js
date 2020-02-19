@@ -33,9 +33,19 @@ describe('Cinema', function() {
     assert.deepStrictEqual(actual, ['Bad Boys', 'Gone in 60 Seconds', 'Love Actually']);
   });
 
-  it('should be able to find a film by title');
+  it('should be able to find a film by title', function() {
+    cinema.addFilm(film1);
+    cinema.addFilm(film2);
+    const actual = cinema.findByTitle('Bad Boys');
+    assert.deepStrictEqual(actual, [film1])
+  });
 
-  it('should be able to filter films by genre');
+  it('should be able to filter films by genre', function() {
+    cinema.addFilm(film1);
+    cinema.addFilm(film3);
+    const actual = cinema.findByGenre('RomCom');
+    assert.deepStrictEqual(actual, [film3])
+  });
 
   it('should be able to check whether there are some films from a particular year');
 
