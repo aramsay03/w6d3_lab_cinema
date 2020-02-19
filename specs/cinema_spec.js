@@ -60,6 +60,7 @@ describe('Cinema', function() {
     cinema.addFilm(film3);
     const actual = cinema.filmLength(100);
     assert.deepStrictEqual(actual, [film1, film3]);
+    ////using .some would need to return true
   });
 
   it('should be able to calculate total running time of all films', function(){

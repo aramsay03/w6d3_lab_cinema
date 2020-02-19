@@ -29,9 +29,13 @@ Cinema.prototype.findByGenre = function (genre) {
   return this.cinemaFilms.filter((film) => film.genre === genre);
 };
 
+//////////BE GOOD TO USE .SOME
+
 Cinema.prototype.findByYear = function (year) {
   return this.cinemaFilms.filter((film) => film.year === year);
 };
+
+//////////////BETTER TO USE .EVERY
 
 Cinema.prototype.filmLength = function (length) {
   return this.cinemaFilms.filter((film) => film.length >= length);
