@@ -52,6 +52,7 @@ describe('Cinema', function() {
     cinema.addFilm(film3);
     const actual = cinema.findByYear(1995);
     assert.deepStrictEqual(actual, [film1])
+    ////would return true or false
   });
 
   it('should be able to check whether all films are over a particular length',
