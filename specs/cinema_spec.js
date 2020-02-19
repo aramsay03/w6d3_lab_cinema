@@ -21,11 +21,17 @@ describe('Cinema', function() {
   it('should have a collection of films', function(){
     cinema.addFilm(film1);
     cinema.addFilm(film2);
-    const actual = cinema.collectionOfFilms(cinema.cinemaFilms)
-    assert.deepStrictEqual(actual, cinema.cinemaFilms)
+    const actual = cinema.collectionOfFilms();
+    assert.deepStrictEqual(actual, cinema.cinemaFilms);
   });
 
-  it('should be able to get a list of film titles');
+  it('should be able to get a list of film titles', function(){
+    cinema.addFilm(film1);
+    cinema.addFilm(film2);
+    cinema.addFilm(film3);
+    const actual = cinema.filmTitles();
+    assert.deepStrictEqual(actual, ['Bad Boys', 'Gone in 60 Seconds', 'Love Actually']);
+  });
 
   it('should be able to find a film by title');
 
