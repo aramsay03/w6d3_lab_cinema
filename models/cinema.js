@@ -19,8 +19,10 @@ Cinema.prototype.filmTitles = function () {
   });
 };
 
+////FIND WOULD BE MORE SUITABLE AS IT FINDS THE FIRST FILM AND RETURNS JUST THAT ONE////////////////
+
 Cinema.prototype.findByTitle = function (title) {
-  return this.cinemaFilms.filter((film) => film.title === title);
+  return this.cinemaFilms.find((film) => film.title === title);
 };
 
 Cinema.prototype.findByGenre = function (genre) {

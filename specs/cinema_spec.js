@@ -37,7 +37,7 @@ describe('Cinema', function() {
     cinema.addFilm(film1);
     cinema.addFilm(film2);
     const actual = cinema.findByTitle('Bad Boys');
-    assert.deepStrictEqual(actual, [film1])
+    assert.deepStrictEqual(actual, film1)
   });
 
   it('should be able to filter films by genre', function() {
